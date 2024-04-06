@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html ng-app="main">
+
+    <div class="content-wrapper" ng-controller="mainAssetCtrl">
+        <section class="content-header">
+            <h1>
+                Emloyees
+                <small>Preview</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li class="me-2"><a href="#"><i
+                            class="fa fa-dashboard"></i>Home</a></li>
+                <li class="active">&nbsp;Employees</li>
+            </ol>
+        </section>
+        <!-- Main content -->
+        <section class="content" ng-init="mainasset.getMainAssetData()"
+            cg-busy="mainasset.getMainAssetDataBusy">
+            <div class="row">
+                <div class="col-xs-12" id="scrollItemType">
+                    <div class="box box-primary padding-bottom-1-present">
+                        <div class="box-header with-border">
+                        </div>
+                        <div
+                            class="box-body form-group margin-top-1-present margin-left-1-present padding-none margin-right-1-present">
+                            <div class="mb-2 text-end">
+                                <label
+                                    class="text-end padding-left-none padding-right-none col-md-12">Entry
+                                    Date : 2024 </label>
+                                <label
+                                    class="text-end control-label padding-left-none padding-right-none col-md-12">Branch
+                                    :IT </label>
+                            </div>
+                            <!--View Item Types-->
+                            <div class="col-md-12 padding-none card">
+                                <div
+                                    class="card-header text-center col-md-12 padding-top-none padding-bottom-none">
+                                    <div class="col-md-2  padding-none">
+                                        <input type="text"
+                                            class="pull-left form-control padding-right-none"
+                                            ng-model="det"
+                                            placeholder="Filter" />
+                                    </div>
+                                    <label
+                                        class="padding-top-1-present margin-bottom-none">Empoyees Details</label>
+                                </div>
+                                <div class="card-body padding-bottom-none ">
+                                    <div
+                                        class="col-md-12 padding-left-none padding-right-none table-responsive"
+                                        id="tblItemType">
+                                        <table
+                                            class="table table-bordered table-striped"
+                                            style="position: relative;">
+                                            <thead>
+                                                <tr class="label-primary">
+                                                    <th>ID</th>
+                                                    <th>Name</th>
+                                                    <th>Address</th>
+                                                    <th>EMP Mobile Number</th>
+                                                    <th>EPF Number</th>
+                                                    <th></th>
+                                                    <th class="text-right"
+                                                        style="width: 7rem">
+                                                        <button
+                                                            class="form-control btn-success btn"
+                                                            data-toggle="modal"
+                                                            (click)="openAddForm()">Add
+                                                            New</button>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr *ngFor="let employee of empList">
+                                                    <td>{{ employee.empID }}</td>
+                                                    <td>{{ employee.empName }}</td>
+                                                    <td>{{ employee.empAddress}}</td>
+                                                    <td>{{ employee.empMNumber}}</td>
+                                                    <td>{{employee.empEPFNumber}}</td>
+                                                    <td
+                                                        class="text-right col-md-1">
+                                                        <button
+                                                            class="form-control btn-success btn"
+                                                            data-toggle="modal"
+                                                            (click)="updateItem()">Update</button>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <button
+                                                            class="form-control btn-danger btn"
+                                                            data-toggle="modal"
+                                                            (click)="removeItem()">Remove</button>
+                                                    </td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="itmDeleteModal" role="dialog"
+                        data-keyboard="false" data-backdrop="static">
+                        <div
+                            class="modal-dialog modal-sm padding-top-15-present">
+                            <div class="modal-content">
+                                <div class="modal-header text-center">
+                                    <label class="text-center">Are you
+                                        sure?</label>
+                                </div>
+                                <div class="modal-footer">
+                                    <div
+                                        class=" text-center btn-group pull-right">
+                                        <button type="button"
+                                            class="btn btn-danger"
+                                            ng-click="mainasset.deleteRecordCnfrm(false)">No</button>
+                                        <button type="button"
+                                            class="btn btn-success"
+                                            ng-click="mainasset.deleteRecordCnfrm(true)">Yes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</html>

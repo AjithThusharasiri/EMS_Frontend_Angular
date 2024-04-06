@@ -1,0 +1,33 @@
+<div mat-dialog-title> 
+    <h1>Enter New Employee Details</h1>
+  </div>
+  <div mat-dialog-content class="content">
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Id</mat-label>
+        <input matInput placeholder="Placeholder" [(ngModel)]="empId" [disabled]="true">
+      </mat-form-field>    
+          <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Enter Name" [(ngModel)]="empName">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Address</mat-label>
+            <input matInput placeholder="Enter Address" [(ngModel)]="empAddress">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Mobile Number</mat-label>
+            <input matInput placeholder="Enter Mobile Number" [(ngModel)]="empMNumber">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>EPF Number</mat-label>
+            <input matInput placeholder="Enter EPF Number" [(ngModel)]="empEPFNumber">
+          </mat-form-field>
+    </div>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-raised-button (click)="closeAddForm()">Cancel</button>
+    <button mat-raised-button color="primary" (click)="saveItem()">Save</button>
+  </div>
+  

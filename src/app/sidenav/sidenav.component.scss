@@ -1,0 +1,188 @@
+.toolbar-item-spacer {
+    flex: 1 1 auto;
+}
+
+.app-container {
+    height: 90%;
+    margin: 0;
+    
+}
+.app-sidenav {
+    width: 230px;
+    
+}
+.app-sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+} 
+.mat-expansion-panel-header:not([aria-disabled=true]) {
+    cursor: pointer;
+    color: white;
+}
+
+.mat-drawer-inner-container {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: b#222d32;
+}
+
+.mat-expansion-panel-header {
+    background-color: #222d32;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 24px;
+    border-radius: inherit;
+    transition: height 225ms cubic-bezier(0.4, 0, 0.2, 1);
+    height: var(--mat-expansion-header-collapsed-state-height);
+    font-family: var(--mat-expansion-header-text-font);
+    font-size: var(--mat-expansion-header-text-size);
+    font-weight: var(--mat-expansion-header-text-weight);
+    line-height: var(--mat-expansion-header-text-line-height);
+    letter-spacing: var(--mat-expansion-header-text-tracking);
+}
+
+.mat-drawer-side {
+    background-color: #222d32;
+    box-shadow: none;
+    border-right-color: var(--mat-sidenav-container-divider-color);
+    border-right-width: 1px;
+    border-right-style: solid;
+}
+
+.mat-expansion-panel-content {
+    background-color: #222d32;
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    font-family: var(--mat-expansion-container-text-font);
+    font-size: var(--mat-expansion-container-text-size);
+    font-weight: var(--mat-expansion-container-text-weight);
+    line-height: var(--mat-expansion-container-text-line-height);
+    letter-spacing: var(--mat-expansion-container-text-tracking);
+}
+
+.mat-expansion-panel {
+    --mat-expansion-container-shape: 4px;
+    box-sizing: content-box;
+    display: block;
+    margin: 0;
+    overflow: hidden;
+    transition: margin 225ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    background: #2c3b41;
+    color: var(--mat-expansion-container-text-color);
+    border-radius: var(--mat-expansion-container-shape);
+}
+
+.inventory{
+    color: white;
+}
+
+//
+
+//
+
+
+.bg-light-blue, .label-primary, .modal-primary .modal-body {
+    background-color: #3c8dbc !important;
+}
+
+.table-bordered>:not(caption)>* {
+    border-width: 1px 0;
+}
+
+.padding-none {
+    padding: 0 !important;
+}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: 0.25rem;
+}
+.mat-icon {
+    margin: 20px;
+    -webkit-user-select: none;
+    user-select: none;
+    background-repeat: no-repeat;
+    display: inline-block;
+    fill: currentColor;
+    height: 24px;
+    width: 24px;
+    overflow: hidden;
+}
+
+//velocity text css
+b, strong {
+    font-weight: bolder;
+    color: white;
+}
+
+//test
+.mat-expansion-panel-header[aria-disabled=true] {
+    color: white;
+}
+
+//
+.mat-mdc-list-base {
+    --mdc-list-list-item-label-text-color: rgb(246 242 242 / 87%);
+    --mdc-list-list-item-supporting-text-color: rgba(235, 191, 191, 0.54);
+    --mdc-list-list-item-leading-icon-color: rgba(0, 0, 0, 0.38);
+    --mdc-list-list-item-trailing-supporting-text-color: rgba(0, 0, 0, 0.38);
+    --mdc-list-list-item-trailing-icon-color: rgba(0, 0, 0, 0.38);
+    --mdc-list-list-item-selected-trailing-icon-color: rgba(0, 0, 0, 0.38);
+    --mdc-list-list-item-disabled-label-text-color: black;
+    --mdc-list-list-item-disabled-leading-icon-color: black;
+    --mdc-list-list-item-disabled-trailing-icon-color: black;
+    --mdc-list-list-item-hover-label-text-color: rgba(0, 0, 0, 0.87);
+    --mdc-list-list-item-hover-leading-icon-color: rgba(0, 0, 0, 0.38);
+    --mdc-list-list-item-hover-trailing-icon-color: rgba(0, 0, 0, 0.38);
+    --mdc-list-list-item-focus-label-text-color: rgba(0, 0, 0, 0.87);
+    --mdc-list-list-item-hover-state-layer-color: black;
+    --mdc-list-list-item-hover-state-layer-opacity: 0.04;
+    --mdc-list-list-item-focus-state-layer-color: black;
+    --mdc-list-list-item-focus-state-layer-opacity: 0.12;
+}
+
+.mat-mdc-list-base {
+    --mdc-list-list-item-label-text-font: Roboto, sans-serif;
+    --mdc-list-list-item-label-text-line-height: 24px;
+    --mdc-list-list-item-label-text-size: 16px;
+    --mdc-list-list-item-label-text-tracking: 0.03125em;
+    --mdc-list-list-item-label-text-weight: 400;
+    --mdc-list-list-item-supporting-text-font: Roboto, sans-serif;
+    --mdc-list-list-item-supporting-text-line-height: 20px;
+    --mdc-list-list-item-supporting-text-size: 14px;
+    --mdc-list-list-item-supporting-text-tracking: 0.0178571429em;
+    --mdc-list-list-item-supporting-text-weight: 400;
+    --mdc-list-list-item-trailing-supporting-text-font: Roboto, sans-serif;
+    --mdc-list-list-item-trailing-supporting-text-line-height: 20px;
+    --mdc-list-list-item-trailing-supporting-text-size: 11px;
+    --mdc-list-list-item-trailing-supporting-text-tracking: 0.0333333333em;
+    --mdc-list-list-item-trailing-supporting-text-weight: 400;
+}
+
+.mat-toolbar.mat-primary {
+    --mat-toolbar-container-background-color: #3f51b5;
+    --mat-toolbar-container-text-color: white;
+}
+.mat-toolbar-row, .mat-toolbar-single-row {
+    display: flex;
+    box-sizing: border-box;
+    padding: 0 16px;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+    min-height: 50px;
+    height: 50px;
+}
