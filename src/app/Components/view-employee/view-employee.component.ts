@@ -14,7 +14,16 @@ export class ViewEmployeeComponent {
 removeItem() {
 throw new Error('Method not implemented.');
 }
-  empList: User[] = [];
+filterTerm: string = '';
+empList: User[] = []; // Populate this array with your items
+
+  get filteredEmpList(): any[] {
+    return this.empList.filter(data => {
+      return data.empName.toLowerCase().includes(this.filterTerm.toLowerCase());
+    });
+  }
+
+  
   // this variable is get data from model
   userToModify: User = new User();
   // this variable determines wither we are in changing or creating new user
@@ -39,10 +48,17 @@ throw new Error('Method not implemented.');
     this._dialog.open(AddNewComponent);
   }
 
-  updateItem() {
-    this._dialog.open(UpdateItemComponent)
-
+  updateItem(empID: string) {
+    this.dataService.getById(empID).subscribe(data => {
+      console.log(data)
+      this._dialog.open(UpdateItemComponent, {
+        data: {
+          employee: data // Pass the data to the UpdateItemComponent
+        }
+      });
+    });
   }
+  
    //Create new Item
    CreateItem(){
     const newUser = {

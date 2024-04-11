@@ -36,10 +36,7 @@
                                 <div
                                     class="card-header text-center col-md-12 padding-top-none padding-bottom-none">
                                     <div class="col-md-2  padding-none">
-                                        <input type="text"
-                                            class="pull-left form-control padding-right-none"
-                                            ng-model="det"
-                                            placeholder="Filter" />
+                                        <input type="text"  class="pull-left form-control padding-right-none" [(ngModel)]="filterTerm" placeholder="Filter" />
                                     </div>
                                     <label
                                         class="padding-top-1-present margin-bottom-none">Empoyees Details</label>
@@ -70,7 +67,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr *ngFor="let employee of empList">
+                                                <tr *ngFor="let employee of empList | AllEmployeeFilterPipe: filterTerm">
                                                     <td>{{ employee.empID }}</td>
                                                     <td>{{ employee.empName }}</td>
                                                     <td>{{ employee.empAddress}}</td>
@@ -81,7 +78,7 @@
                                                         <button
                                                             class="form-control btn-success btn"
                                                             data-toggle="modal"
-                                                            (click)="updateItem()">Update</button>
+                                                            (click)="updateItem(employee.empID)">Update</button>
                                                     </td>
                                                     <td class="text-right">
                                                         <button

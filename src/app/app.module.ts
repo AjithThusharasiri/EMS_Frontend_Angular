@@ -21,6 +21,7 @@ import {MatInputModule} from '@angular/material/input';
 import { MatSnackBarModule, matSnackBarAnimations } from '@angular/material/snack-bar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { ViewEmployeeComponent } from './Components/view-employee/view-employee.component';
+import { AllEmployeeFilterPipe } from './pipe/AllEmployeeFilterPipe';
 
 
 
@@ -31,7 +32,9 @@ import { ViewEmployeeComponent } from './Components/view-employee/view-employee.
     AddNewComponent,
     HomeComponent,
     UpdateItemComponent,
-    ViewEmployeeComponent
+    ViewEmployeeComponent,
+    AllEmployeeFilterPipe
+
   ],
   imports: [
     BrowserModule,
@@ -49,7 +52,7 @@ import { ViewEmployeeComponent } from './Components/view-employee/view-employee.
     MatFormFieldModule,
     MatInputModule,
     MatSnackBarModule,
-    MatSidenavModule
+    MatSidenavModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Observer } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +16,17 @@ export class DataService {
 
   saveEmployee(data: any): Observable<any> {
     return this.http.post(`${this.BASE_URL}saveEmployee`, data, { responseType: 'text' });
-    console.log(data);
   }
+
+getById(id: string): Observable<any> {
+  return this.http.get<any>(`${this.BASE_URL}searchEmployee/${id}`);
+}
+
+
+updateEmployee(data: any): Observable<any> {
+  console.log(data)
+  return this.http.put<any>(`${this.BASE_URL}updateEmployee`, data, { responseType: 'json' });
+}
+
+
 }
