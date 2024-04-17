@@ -39,9 +39,10 @@
                 </mat-nav-list>
             </mat-expansion-panel> -->
             <mat-expansion-panel [class.mat-elevation-z0]="true" [disabled]="true">
-                <mat-expansion-panel-header [routerLink]="['/viewEmployee']" routerLinkActive="router-link-active" >
-                    View All Employee
-                </mat-expansion-panel-header>
+                <mat-expansion-panel-header [routerLink]="['/viewEmployee']" routerLinkActive="router-link-active">
+                    <mat-icon>people</mat-icon>
+                    View Employees
+                </mat-expansion-panel-header>                
             </mat-expansion-panel>
         </mat-nav-list>
     </mat-sidenav>

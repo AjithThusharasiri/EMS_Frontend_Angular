@@ -78,13 +78,19 @@
                                                         <button
                                                             class="form-control btn-success btn"
                                                             data-toggle="modal"
-                                                            (click)="updateItem(employee.empID)">Update</button>
+                                                            (click)="updateEmp(employee.empID)">Update</button>
                                                     </td>
                                                     <td class="text-right">
                                                         <button
                                                             class="form-control btn-danger btn"
                                                             data-toggle="modal"
-                                                            (click)="removeItem()">Remove</button>
+                                                            (click)="deleteEmp(employee.empID)">Remove</button>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <button
+                                                            class="form-control btn-success btn"
+                                                            data-toggle="modal"
+                                                            (click)="printEmp()">print</button>
                                                     </td>
                                                 </tr>
 
